@@ -16,6 +16,7 @@ jobs:
     steps:
       - name: checkout the project
         uses: actions/checkout@v2.4.2
+      - run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
 
       - name:  login to docker
         uses: docker/login-action@v2.0.0
@@ -25,5 +26,8 @@ jobs:
 
       - name: build and push docker container image
         uses: docker/build-push-action@v3.0.0
+        with:
+          push: true
+          tags: ${{ env.IMAGE_NAME }}:${{ env.RELEASE_VERSION }}
 
 
