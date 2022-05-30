@@ -1,7 +1,7 @@
-# Android Deployer 
+# Android Deployer
 
-Docker image that helps android devs to deploy there apps on different platforms. 
+Docker image that helps android devs to deploy there apps on different platforms.
 
-
-### Supported Platforms
+### Supported Tools
 - Appcenter
+- Fastlane
