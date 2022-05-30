@@ -2,6 +2,8 @@ FROM sh3lan93/android-31:latest
 
 RUN apt-get update
 
+RUN apt-get install -y sudo
+
 RUN apt-get install -y build-essential
 
 # REPLACE SHELL WITH BASH
@@ -29,5 +31,7 @@ RUN apt-get install -y ruby-full
 RUN gem install bundler
 
 RUN gem install fastlane
+
+RUN curl -sL https://firebase.tools | bash
 
 CMD bash
