@@ -34,4 +34,6 @@ RUN gem install fastlane
 
 RUN curl -sL https://firebase.tools | bash
 
+RUN apt-get install -y jq
+
 CMD bash
