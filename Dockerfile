@@ -1,4 +1,4 @@
-FROM sh3lan93/android-31:latest
+FROM sh3lan93/android-33:latest
 
 RUN apt-get update
 
